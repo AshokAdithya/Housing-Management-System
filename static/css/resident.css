@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  color: #eeeeee;
+  background-color: #00adb5;
+}
+
+html,
+body {
+  width: 100vw;
+  height: auto;
+  background-color: #222831;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outer-div {
+  width: 95%;
+  height: 90%;
+  margin: 40px 0px;
+  background-color: #393e46;
+  border-radius: 50px;
+  padding: 50px;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 45px;
+  font-weight: 600;
+  color: #00adb5;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+p {
+  color: #eeeeee;
+  font-size: 20px;
+}
+
+.fee {
+  color: #e84545;
+  font-size: 25px;
+}
+
+.no-fee {
+  color: #00adb5;
+  font-size: 25px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 2px solid #00adb5;
+  text-align: left;
+  padding: 8px;
+  color: #eeeeee;
+  text-align: center;
+}
+
+th {
+  background-color: #222831;
+}
+
+.logout {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+
+.complaint {
+  position: absolute;
+  top: 2%;
+  right: 11%;
+}
+
+.button-logout,
+.button-complaint {
+  outline: none;
+  border: none;
+  border-radius: 9999px;
+  padding: 5px 20px;
+  font-size: 20px;
+  color: #00adb5;
+  background-color: #eeeeee;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.payment-button {
+  margin-top: 30px;
+  outline: none;
+  border: none;
+  border-radius: 9999px;
+  padding: 5px 50px;
+  font-size: 20px;
+  color: #00adb5;
+  background-color: #eeeeee;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.payment-button:hover {
+  transform: scale(1.03);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9998;
+  display: none;
+}
+
+.details-view {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222831;
+  width: 500px;
+  height: 500px;
+  display: none;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.payment-title {
+  height: 60px;
+  padding: 0px 20px;
+  background-color: #393e46;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.payment-title .payment-h1 {
+  font-size: 25px;
+  text-align: center;
+  color: #00adb5;
+}
+
+.cross {
+  background: #eeeeee;
+  font-size: 20px;
+  padding: 0 10px;
+  outline: none;
+  border-radius: 10px;
+  color: #00adb5;
+  border: none;
+  cursor: pointer;
+}
+
+.cross:hover {
+  transform: scale(1.02);
+}
+
+.payment-details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.payment-details h2 {
+  color: #eeeeee;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.payment-money {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.money {
+  color: #bbb4b4;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.line {
+  margin: 20px 0px;
+  opacity: 0.5;
+  border: 1px solid #646060;
+}
+
+.total {
+  color: #eeeeee;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.payment-method {
+  padding: 10px 20px;
+}
+
+.payment-method h2 {
+  margin-bottom: 10px;
+  color: #eeeeee;
+  font-weight: 500;
+  font-size: 20px;
+}
+.options {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.button-options {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-options span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.payment-done {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.done-button {
+  margin-top: 10%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 20px;
+  font-size: 20px;
+  color: #00adb5;
+  background-color: #eeeeee;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.done-button:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 450px) {
+  .outer-div {
+    width: 85%;
+    border-radius: 30px;
+  }
+  h1 {
+    margin-top: 40px;
+    font-size: 30px;
+  }
+  p {
+    font-size: 16px;
+    text-align: start !important;
+  }
+  .fee,
+  .no-fee {
+    text-align: center !important;
+    font-size: 18px;
+  }
+  .complaint {
+    position: static;
+  }
+  .logout {
+    position: absolute;
+    top: 3%;
+    right: 8%;
+  }
+  .neighbour-heading {
+    margin-top: -50px !important;
+  }
+
+  .table-div {
+    width: 300px !important;
+    overflow-x: auto;
+    margin-bottom: 50px;
+  }
+
+  table {
+    width: auto;
+    height: auto;
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    padding: 5px;
+    font-size: 14px;
+  }
+  .details-view {
+    width: 300px;
+    height: auto !important;
+  }
+
+  .options {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .payment-title .payment-h1 {
+    font-size: 20px;
+  }
+  .cross {
+    font-size: 16px;
+  }
+  .payment-details h2 {
+    font-size: 18px;
+  }
+  .total {
+    color: #eeeeee;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .payment-method h2 {
+    font-size: 28px;
+  }
+  .options {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .button-options {
+    width: 170px;
+  }
+  .done-button {
+    margin-bottom: 20px;
+  }
+}
