@@ -99,6 +99,22 @@ def check_and_update_fee():
         house_table.save_to_file('./static/data/house_table.json')
         print("User and house tables saved to file")
 
+
+def guest_page_availability(house_table):
+    house_dict={}
+    for node in house_table.table:
+        while node is not None:
+            house_dict[node.key]=node.value
+            node=node.next
+    
+    def key_generation(house_number):
+        parts=house_number.split("-")
+        return int(parts[1])
+
+
+    houses=dict(sorted(house_dict.items(),key=lambda item:key_generation(item[0])))
+    return houses
+
 def send_mail(flat, name, email, subject, message):
     email_message = f"""
     <html>
@@ -314,10 +330,7 @@ def add_flats():
 
 @app.route("/guest")
 def guest():
-    house_status = {}
-    for node in house_table.table:
-        if node:
-            house_status[node.key] = node.value
+    house_status=guest_page_availability(house_table)
     return render_template("guest.html", house_status=house_status)
 
 @app.route("/logout")

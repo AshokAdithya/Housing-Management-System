@@ -34,10 +34,6 @@
         <p class="no-fee">No dues left.</p>
         {% else %}
         <p class="fee">
-          <strong>Rent to be paid for the month:</strong>
-          {{ user["rent"] }}
-        </p>
-        <p class="fee">
           <strong>Maintenance Fee to be paid for the month:</strong>
           {{ user["maintenance_fee"] }}
         </p>
@@ -98,17 +94,13 @@
         <div class="payment-details">
           <h2>Summary</h2>
           <div class="payment-money">
-            <p class="money">Rent:</p>
-            <p class="money">₹{{user["rent"]}}</p>
-          </div>
-          <div class="payment-money">
             <p class="money">Maintenance Fee:</p>
             <p class="money">₹{{user["maintenance_fee"]}}</p>
           </div>
           <hr class="line" />
           <div class="payment-money">
             <p class="total">Total:</p>
-            <p class="total">₹{{user["rent"] + user["maintenance_fee"]}}</p>
+            <p class="total">₹{{user["maintenance_fee"]}}</p>
           </div>
         </div>
         <div class="payment-method">
