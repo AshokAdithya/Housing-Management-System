@@ -154,21 +154,21 @@ def login(role):
             data = admin_table.search(username)
             
             if data is None:
-                error = "Wrong Credentials. Try Again !!"
+                error = "Invalid Login. Try Again !!"
                 return render_template("login.html", role=role, error=error)
             
             if data['password'] == password:
                 session["admin_logged_in"] = True
                 return redirect(url_for("admin"))
             else:
-                error = "Wrong Credentials. Try Again !!"
+                error = "Invalid Login. Try Again !!"
                 return render_template("login.html", role=role, error=error)
                 
         elif role == "resident":
             data = user_table.search(username)
 
             if data is None:
-                error = "Wrong Credentials. Try Again !!"
+                error = "Invalid Login. Try Again !!"
                 return render_template("login.html", role=role, error=error)
             
             if data['password'] == password:
@@ -176,7 +176,7 @@ def login(role):
                 return redirect(url_for("resident", user=username))
             
             else:
-                error = "Wrong Credentials. Try Again !!"
+                error = " Invalid Login. Try Again !!"
                 return render_template("login.html", role=role, error=error)
                 
     return render_template("login.html", role=role)
