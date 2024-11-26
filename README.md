@@ -35,6 +35,7 @@
 - **Monthly Rent Updates**: A cronjob runs monthly to automatically update the rent fees.
 - **Security System**: Implements basic security measures to ensure user data is protected and transactions are secure.
 - **User-Friendly Interface**: Built with a simple and responsive frontend for tenants and admins.
+- **Data-Structures**: Hash Tables, JSON, Chaining were used in this Project.
 
 ---
 
@@ -52,8 +53,8 @@ To get the project up and running, you’ll need:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/AshokAdithya/Housing-Management-System-
-   cd Housing-Management-System-
+   git clone https://github.com/AshokAdithya/Housing-Management-System
+   cd Housing-Management-System
    ```
 2. Install necessary modules and packages
    ```bash
@@ -63,7 +64,7 @@ To get the project up and running, you’ll need:
 ## Usage
   To run the project, use the following command:
   ```bash
-  python main.py
+  python app.py
   ```
 
 ## Contributing
